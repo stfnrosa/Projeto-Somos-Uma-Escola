@@ -34,11 +34,8 @@ class Turma {
     }
 
     // acessa e verifica o valor privado do atruibuto Vagas 
-    public function setVagas($vagas) {
-        if ($vagas <= 0) {
-            throw new \Exception("A turma deve ter pelo menos uma vaga");
-        }
-        $this->vagas = $vagas;
+    public function getVagas() {
+        return $this->vagas;
     }
     
     // acessa o valor privado do atruibuto AlunosMatriculados

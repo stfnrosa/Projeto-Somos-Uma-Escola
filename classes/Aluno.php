@@ -4,10 +4,10 @@ namespace classes;
 
 class Aluno {
     // encapsulamento
-    public $id;
-    public $nome;
-    public $data_nascimento;
-    public $cpf;
+    private $id;
+    private $nome;
+    private $data_nascimento;
+    private $cpf;
 
     // construtor inicializa os atributos
     public function __construct($id, $nome, $data_nascimento, $cpf) {

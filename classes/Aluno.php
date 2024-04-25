@@ -3,11 +3,13 @@
 namespace classes;
 
 class Aluno {
+    // encapsulamento
     public $id;
     public $nome;
     public $data_nascimento;
     public $cpf;
 
+    // construtor inicializa os atributos
     public function __construct($id, $nome, $data_nascimento, $cpf) {
         $this->id = $id;
         $this->nome = $nome;
@@ -15,18 +17,22 @@ class Aluno {
         $this->cpf = $cpf;
     }
 
+    // acessa o valor privado do atruibuto Id 
     public function getId() {
         return $this->id;
     }
 
+    // acessa o valor privado do atruibuto Nome
     public function getNome() {
         return $this->nome;
     }
 
+    // acessa o valor privado do atruibuto DataNascimento
     public function getDataNascimento() {
         return $this->data_nascimento;
     }
 
+    // acessa o valor privado do atruibuto Cpf
     public function getCpf() {
         return $this->cpf;
     }

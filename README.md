@@ -1,4 +1,4 @@
-*Controle Escolar - Sistema Simples em PHP
+# Controle Escolar - Sistema Simples em PHP
 Este é um sistema de controle escolar desenvolvido em PHP, que permite cadastrar alunos, turmas e realizar matrículas.
 
 Como Usar

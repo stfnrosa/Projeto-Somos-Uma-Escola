@@ -36,4 +36,9 @@ class Aluno {
     public function getCpf() {
         return $this->cpf;
     }
+
+    // método para cadastrar os alunos
+    public static function cadastrar($id, $nome, $data_nascimento, $cpf) {
+        return new self($id, $nome, $data_nascimento, $cpf);
+    }
 }

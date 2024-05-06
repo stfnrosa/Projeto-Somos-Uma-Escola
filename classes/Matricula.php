@@ -30,4 +30,9 @@ class Matricula {
         return $this->data_matricula;
     }
 
+    // método para cadastrar turma
+    public static function cadastrarMatricula($id_aluno, $id_turma, $data_matricula) {
+        return new self($id_aluno, $id_turma, $data_matricula);
+    }
+
 }

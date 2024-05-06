@@ -30,43 +30,27 @@ use classes\Aluno;
 use classes\Turma;
 use classes\Matricula;
 
-// Função para cadastrar um aluno
-function cadastrarAluno($id, $nome, $data_nascimento, $cpf) {
-    return new Aluno($id, $nome, $data_nascimento, $cpf);
-}
-
-// Função para cadastrar uma turma
-function cadastrarTurma($id, $descricao, $ano, $vagas) {
-    return new Turma($id, $descricao, $ano, $vagas);
-}
-
-// Função para cadastrar uma matrícula
-function cadastrarMatriculas($id_aluno, $id_turma, $data_matricula) {
-    return new Matricula($id_aluno, $id_turma, $data_matricula);
-}
-
-// Cadastrando alunos
-$aluno1 = cadastrarAluno(1, "Pedro", "2009-01-01", "12345678901");
-$aluno2 = cadastrarAluno(2, "Renato", "2010-12-02", "98765432109");
-$aluno3 = cadastrarAluno(3, "Silvio", "2011-11-03", "45678901234");
-$aluno4 = cadastrarAluno(4, "Maria", "2009-02-15", "78901234567"); 
-$aluno5 = cadastrarAluno(5, "João", "2010-03-20", "89012345678"); 
-$aluno6 = cadastrarAluno(6, "Ana", "2011-04-25", "90123456789");
+// Cadastrando alunos usando o método estático
+$aluno1 = Aluno::cadastrar(1, "Pedro", "2009-01-01", "12345678901");
+$aluno2 = Aluno::cadastrar(2, "Renato", "2010-12-02", "98765432109");
+$aluno3 = Aluno::cadastrar(3, "Silvio", "2011-11-03", "45678901234");
+$aluno4 = Aluno::cadastrar(4, "Maria", "2009-02-15", "78901234567"); 
+$aluno5 = Aluno::cadastrar(5, "João", "2010-03-20", "89012345678"); 
+$aluno6 = Aluno::cadastrar(6, "Ana", "2011-04-25", "90123456789");
 
 // Cadastrando turmas
-$turma1 = cadastrarTurma(1, "1 Ano", 2020, 30);
-$turma2 = cadastrarTurma(2, "2 Ano", 2020, 30);
-
+$turma1 = Turma::cadastrarTurma(1, "1 Ano", 2020, 30);
+$turma2 = Turma::cadastrarTurma(2, "2 Ano", 2020, 30);
 
 // Cadastrando matrículas turma 1
-$matricula1 = cadastrarMatriculas(1, 1, "2024-01-15");
-$matricula2 = cadastrarMatriculas(2, 1, "2024-01-16");
-$matricula3 = cadastrarMatriculas(3, 1, "2024-01-17");
+$matricula1 = Matricula::cadastrarMatricula(1, 1, "2024-01-15");
+$matricula2 = Matricula::cadastrarMatricula(2, 1, "2024-01-16");
+$matricula3 = Matricula::cadastrarMatricula(3, 1, "2024-01-17");
 
 // Cadastrando matrículas turma 2
-$matricula4 = cadastrarMatriculas(4, 2, "2024-01-20"); 
-$matricula5 = cadastrarMatriculas(5, 2, "2024-01-21"); 
-$matricula6 = cadastrarMatriculas(6, 2, "2024-01-22");
+$matricula4 = Matricula::cadastrarMatricula(4, 2, "2024-01-20"); 
+$matricula5 = Matricula::cadastrarMatricula(5, 2, "2024-01-21"); 
+$matricula6 = Matricula::cadastrarMatricula(6, 2, "2024-01-22");
 
 // Matriculando Alunos na turma 1
 $turma1->matricularAluno($aluno1);

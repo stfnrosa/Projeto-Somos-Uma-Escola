@@ -42,6 +42,11 @@ class Turma {
     public function getAlunosMatriculados() {
         return $this->alunos_matriculados;
     }
+
+    // método  para cadastrar a turma
+    public static function cadastrarTurma($id, $descricao, $ano, $vagas) {
+        return new self($id, $descricao, $ano, $vagas);
+    }
     
     // método verifica a disponibilidade de vagas e então permite matricular um objeto da classe Aluno na turma
     public function matricularAluno(Aluno $aluno) {

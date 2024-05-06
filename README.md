@@ -7,7 +7,7 @@ Cadastro de Turmas: Crie novas turmas especificando o ano, a descrição e o nú
 Matrículas: Matricule alunos em turmas existentes.
 Geração de Relatórios: Crie relatórios de chamadas para as turmas selecionadas.
 Exemplo de Uso: Criando um realatorio para a turma "1 Ano"
-<div style="text-align: center;">
+<div style="align-itens: center;">
     <img src="tabela_alunos.png" alt="Tabela de Alunos">
 </div>
 Contribuição
